@@ -89,6 +89,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 
 	indata(&td, argv[0]);
 	td.envir = envir;
+	signal(SIGINT, handle_signal);
 	if (!isatty(STDIN_FILENO))
 	{
 		while ((read = getline(&(td.cmd), &length, stdin)) != -1)
@@ -117,8 +118,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 					execut_envir(td.envir);
 				else
 					execut_cmd(&td);
-			}
-			free_toknz(&td);
+			} free_toknz(&td);
 		}
 	}
 	free_data(&td);
