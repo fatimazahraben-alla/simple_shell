@@ -1,4 +1,4 @@
-size_t_strlen(const char *3, size_t maxlen) { 
+size_t_strlen(const char *s, size_t maxlen) { 
     const char *p = s;
     size_t len = 0;
     while (len < maxlen && *p != '\0') {
