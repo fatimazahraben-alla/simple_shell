@@ -1,4 +1,4 @@
-#include "c_shell.c"
+#include "c_shell.h"
 
 /**
  * _strcmp - strcmp func
@@ -96,7 +96,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 		{
 			if (td.cmd[read - 1] == '\n')
 				td.cmd[read - 1] = '\0';
-			tokenz_input(&t);
+			tokenz_input(&td);
 			if (td.ave[0])
 				execut_cmd(&td);
 			free_toknz(&td);

@@ -1,4 +1,4 @@
-#include "c_shell.c"
+#include "c_shell.h"
 
 /**
  * handle_signal - handle_signal

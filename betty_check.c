@@ -4,7 +4,7 @@
  *
  *Return: 0 success
  */
-int main(void)
+int mainn(void)
 {
 	printf("^_^");
 
