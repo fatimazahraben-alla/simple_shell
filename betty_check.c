@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - main function
+ *mainn - main function
  *
  *Return: 0 success
  */
