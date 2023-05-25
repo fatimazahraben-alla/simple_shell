@@ -64,19 +64,14 @@ void execut_envir(char **envir)
  */
 void execut_ext(data *td)
 {
-	int status;
+	int status = 0;
 
 	if (td->ave[1] != NULL)
 	{
 		status = _atoi(td->ave[1]);
-		free_data(td);
-		exit(status);
 	}
-	else
-	{
-		free_data(td);
-		exit(EXIT_SUCCESS);
-	}
+	free_data(td);
+	exit(status);
 }
 /**
  * main - main function
