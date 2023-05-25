@@ -50,7 +50,7 @@ void execut_envir(char **envir)
 {
 	int i;
 
-	for(i = 0; envir[i]; i++)
+	for (i = 0; envir[i]; i++)
 	{
 		printf("%s\n", envir[i]);
 	}
@@ -89,7 +89,6 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 
 	indata(&td, argv[0]);
 	td.envir = envir;
-
 	if (!isatty(STDIN_FILENO))
 	{
 		while ((read = getline(&(td.cmd), &length, stdin)) != -1)
@@ -101,8 +100,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 				execut_cmd(&td);
 			free_toknz(&td);
 		}
-	}
-	else
+	} else
 	{
 		while (1)
 		{
