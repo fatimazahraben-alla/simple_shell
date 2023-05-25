@@ -1,4 +1,5 @@
 /C - Simple Shell/
 in ALX project 
 0x16. C 
-_____Langage C_______
+_____Langage C______
+ALX_
