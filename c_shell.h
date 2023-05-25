@@ -38,6 +38,7 @@ char *_strdup(const char *s);
 void *_memset(void *ptr, int v, size_t num);
 char *_strncpy(char *dest, const char *src, size_t n);
 int _strcmp(const char *s1, const char *s2);
+int _atoi(const char *s);
 
 void pr_input(data *td);
 void tokenz_input(data *td);

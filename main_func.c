@@ -68,7 +68,7 @@ void execut_ext(data *td)
 
 	if (td->ave[1] != NULL)
 	{
-		status = atoi(td->ave[1]);
+		status = _atoi(td->ave[1]);
 		free_data(td);
 		exit(status);
 	}
