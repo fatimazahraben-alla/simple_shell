@@ -28,12 +28,14 @@ void execut_cmd(data *td)
 	if (child_pid == -1)
 	{
 		perror(td->sname);
+		free_data(td);
 		exit(EXIT_FAILURE);
 	}
 	else if (child_pid == 0)
 	{
 		execvp(td->ave[0], td->ave);
 		perror(td->sname);
+		free_data(td);
 		exit(EXIT_FAILURE);
 	}
 	else
