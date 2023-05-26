@@ -97,28 +97,17 @@ int main(__attribute__((unused)) int argc, char **argv, char **envir)
 				td.cmd[read - 1] = '\0';
 			tokenz_input(&td);
 			if (td.ave[0])
-				execut_cmd(&td);
+			{
+				if (_strcmp(td.ave[0], "cd") == 0)
+					execut_cd(&td);
+				else
+					execut_cmd(&td);
+			}
 			free_toknz(&td);
 		}
 	} else
 	{
-		while (1)
-		{
-			printf("$ ");
-			pr_input(&td);
-			if (td.cmd[0] == '\0')
-				break;
-			tokenz_input(&td);
-			if (td.ave[0])
-			{
-				if (_strcmp(td.ave[0], "exit") == 0)
-					execut_ext(&td);
-				else if (_strcmp(td.ave[0], "env") == 0)
-					execut_envir(td.envir);
-				else
-					execut_cmd(&td);
-			} free_toknz(&td);
-		}
+		_mode(&td);
 	}
 	free_data(&td);
 	return (0);
